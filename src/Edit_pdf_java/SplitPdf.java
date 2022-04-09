@@ -14,9 +14,13 @@ public class SplitPdf
 
 	public static void main(String[] args)
 	{
+		Executar();
+	}
+
+	public static void Executar()
+	{
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";
-		
 	    //Loading existing documents
 	    File dir = new File(INPUT_PATH);
 	    File[] directoryListing = dir.listFiles();
@@ -55,8 +59,6 @@ public class SplitPdf
             	}
             }
 	    }
-	    
-		
 	}
 
 }
