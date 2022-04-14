@@ -12,6 +12,11 @@ public class MergePdfs
 {
 	public static void main(String[] args)
 	{	
+		Ejecutar();
+	}
+
+	static void Ejecutar()
+	{
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";
 		
@@ -48,8 +53,6 @@ public class MergePdfs
 				e.printStackTrace();
 			}
 	    }
-	    
-
 	}
 
 

@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import java.io.File;
+import java.io.IOException;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -16,7 +18,7 @@ public class Edit_pdf_java
 	private JFrame frame;
 	private JButton btnInsertMetadata;
 	private JButton btnMergePdfs;
-	private JButton Remove_links;
+	private JButton BRemove_links;
 	private JButton btnRemoveMetadata;
 	private JButton btnRemovePage;
 	private JButton btnSplit;
@@ -81,7 +83,15 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
+				try
+				{
+					GetImages.Ejecutar();
+				}
+				catch (IOException e1)
+				{
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnGetImages.setBounds(10, 33, 103, 23);
@@ -94,7 +104,7 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
+				InsertMetadata.Ejecutar();
 			}
 		});
 		btnInsertMetadata.setFocusable(false);
@@ -107,25 +117,32 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
+				MergePdfs.Ejecutar();
 			}
 		});
 		btnMergePdfs.setFocusable(false);
 		btnMergePdfs.setBounds(270, 33, 127, 23);
 		frame.getContentPane().add(btnMergePdfs);
 		
-		Remove_links = new JButton("Remove links");
-		Remove_links.setBackground(new Color(240, 255, 255));
-		Remove_links.addActionListener(new ActionListener()
+		BRemove_links = new JButton("Remove links");
+		BRemove_links.setBackground(new Color(240, 255, 255));
+		BRemove_links.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
+				try
+				{
+					Remove_links.Ejecutar();
+				}
+				catch (IOException e1)
+				{
+					e1.printStackTrace();
+				}
 			}
 		});
-		Remove_links.setFocusable(false);
-		Remove_links.setBounds(270, 118, 127, 23);
-		frame.getContentPane().add(Remove_links);
+		BRemove_links.setFocusable(false);
+		BRemove_links.setBounds(270, 118, 127, 23);
+		frame.getContentPane().add(BRemove_links);
 		
 		btnRemoveMetadata = new JButton("Remove Metadata");
 		btnRemoveMetadata.setBackground(new Color(248, 248, 255));
@@ -133,7 +150,7 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
+				RemoveMetadata.Ejecutar();
 			}
 		});
 		btnRemoveMetadata.setFocusable(false);
@@ -146,7 +163,14 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
+				try
+				{
+					RemovingPages.Ejecutar(1);
+				}
+				catch (IOException e1)
+				{
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnRemovePage.setFocusable(false);
@@ -159,7 +183,7 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				SplitPdf.Executar(); // All done
+				SplitPdf.Ejecutar(); // All done
 			}
 		});
 		btnSplit.setFocusable(false);

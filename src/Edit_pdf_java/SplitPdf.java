@@ -14,10 +14,10 @@ public class SplitPdf
 
 	public static void main(String[] args)
 	{
-		Executar();
+		Ejecutar();
 	}
 
-	public static void Executar()
+	static void Ejecutar()
 	{
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";

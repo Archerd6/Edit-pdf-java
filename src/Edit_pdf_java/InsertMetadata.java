@@ -13,6 +13,11 @@ public class InsertMetadata
 
 	public static void main(String[] args)
 	{
+		Ejecutar();
+	}
+
+	static void Ejecutar()
+	{
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";
 		
@@ -45,7 +50,7 @@ public class InsertMetadata
 	            		information.setTitle("Trabajo");
 	            		information.setSubject("Asunto");
 	            		information.setKeywords("Palabras Clave");
-	            		information.setAuthor("David Ramírez Arco");
+	            		information.setAuthor("David RA");
 	            		information.setCreator("Writer");
 	            		information.setProducer("LibreOffice 7.2");
 	            		information.setCreationDate(Calendar.getInstance());
@@ -69,5 +74,6 @@ public class InsertMetadata
 	    }
 
 	}
-
+	
+	
 }

@@ -18,6 +18,11 @@ public class GetImages
 {
 	public static void main(String args[]) throws IOException
 	{
+		Ejecutar();
+	}
+
+	static void Ejecutar() throws IOException
+	{
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";
 	    

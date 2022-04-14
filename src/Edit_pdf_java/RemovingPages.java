@@ -10,6 +10,12 @@ public class RemovingPages
 {
 	public static void main(String args[]) throws IOException
 	{
+		int pagina = Integer.parseInt(args[0]);
+		Ejecutar(pagina);
+	}
+
+	static void Ejecutar(int pagina) throws IOException
+	{
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";
 		
@@ -35,7 +41,7 @@ public class RemovingPages
             		System.out.println("Número de paginas: "+noOfPages);
             		
             		//Removing the pages
-            		document.removePage(Integer.parseInt(args[0])-1); // BORRA LA PAGUINA args[0]
+            		document.removePage(pagina-1); // BORRA LA PAGUINA args[0]
             		System.out.println("Pagina borrada, ahora quedan: "+document.getNumberOfPages());
             		
             		//Saving the document
@@ -47,7 +53,5 @@ public class RemovingPages
             }
 	    }
 		
-		
-
 	}
 }
