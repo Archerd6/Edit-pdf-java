@@ -163,13 +163,20 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				try
+				if(txtTextosiFuera.isVisible())
 				{
-					RemovingPages.Ejecutar(1);
+					try
+					{
+						RemovingPages.Ejecutar(Integer.parseInt(txtTextosiFuera.getText()));
+					}
+					catch (IOException e1)
+					{
+						e1.printStackTrace();
+					}
 				}
-				catch (IOException e1)
+				else
 				{
-					e1.printStackTrace();
+					txtTextosiFuera.setVisible(true);
 				}
 			}
 		});
