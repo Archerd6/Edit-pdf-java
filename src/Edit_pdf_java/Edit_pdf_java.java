@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -11,8 +12,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
 public class Edit_pdf_java
 {
@@ -23,7 +22,6 @@ public class Edit_pdf_java
 	private JButton btnRemoveMetadata;
 	private JButton btnRemovePage;
 	private JButton btnSplit;
-	private JTextField txtTextosiFuera;
 
 	/**
 	 * Launch the application.
@@ -53,8 +51,6 @@ public class Edit_pdf_java
 	{
 		// First done by the program
 		initialize();
-		//textPath.setText(System.getProperty("user.dir")); // Pruebas
-		txtTextosiFuera.setVisible(false);
 		
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";
@@ -92,7 +88,6 @@ public class Edit_pdf_java
 				}
 				catch (IOException e1)
 				{
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
@@ -107,7 +102,10 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				InsertMetadata.Ejecutar();
+				Insert_metadata_Window D = new Insert_metadata_Window();
+	        	D.setVisible(true);
+	        	
+	        	frame.dispose();
 			}
 		});
 		btnInsertMetadata.setFocusable(false);
@@ -166,21 +164,11 @@ public class Edit_pdf_java
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				if(txtTextosiFuera.isVisible())
-				{
-					try
-					{
-						RemovingPages.Ejecutar(Integer.parseInt(txtTextosiFuera.getText()));
-					}
-					catch (IOException e1)
-					{
-						e1.printStackTrace();
-					}
-				}
-				else
-				{
-					txtTextosiFuera.setVisible(true);
-				}
+				
+				Delete_page_Window D = new Delete_page_Window();
+	        	D.setVisible(true);
+	        	
+	        	frame.dispose();
 			}
 		});
 		btnRemovePage.setFocusable(false);
@@ -199,12 +187,5 @@ public class Edit_pdf_java
 		btnSplit.setFocusable(false);
 		btnSplit.setBounds(145, 305, 127, 23);
 		frame.getContentPane().add(btnSplit);
-		
-		txtTextosiFuera = new JTextField();
-		txtTextosiFuera.setHorizontalAlignment(SwingConstants.CENTER);
-		txtTextosiFuera.setText("(Number)");
-		txtTextosiFuera.setBounds(0, 0, 428, 20);
-		frame.getContentPane().add(txtTextosiFuera);
-		txtTextosiFuera.setColumns(10);
 	}
 }

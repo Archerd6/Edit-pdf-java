@@ -13,10 +13,10 @@ public class InsertMetadata
 
 	public static void main(String[] args)
 	{
-		Ejecutar();
+		Ejecutar(null, null, null, null, null, null);
 	}
 
-	static void Ejecutar()
+	static void Ejecutar(String string, String string2, String string3, String string4, String string5, String string6)
 	{
 		String INPUT_PATH = System.getProperty("user.dir") + "\\pdf_In";
 	    String OUTPUT_PATH = System.getProperty("user.dir") + "\\pdf_Out";
@@ -47,12 +47,12 @@ public class InsertMetadata
 	            		
 	            		PDDocumentInformation information = new PDDocumentInformation();
 	            		
-	            		information.setTitle("Trabajo");
-	            		information.setSubject("Asunto");
-	            		information.setKeywords("Palabras Clave");
-	            		information.setAuthor("David RA");
-	            		information.setCreator("Writer");
-	            		information.setProducer("LibreOffice 7.2");
+	            		information.setTitle(string);
+	            		information.setSubject(string2);
+	            		information.setKeywords(string3);
+	            		information.setAuthor(string4);
+	            		information.setCreator(string5);
+	            		information.setProducer(string6);
 	            		information.setCreationDate(Calendar.getInstance());
 	            		information.setModificationDate(Calendar.getInstance());
 	            		
