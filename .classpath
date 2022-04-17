@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="res/" kind="src" path="src"/>
 	<classpathentry kind="src" path="libs"/>
-	<classpathentry kind="src" path="imgs"/>
+	<classpathentry kind="src" path="res"/>
 	<classpathentry kind="lib" path="libs/pdfbox-app-3.0.0-alpha2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
