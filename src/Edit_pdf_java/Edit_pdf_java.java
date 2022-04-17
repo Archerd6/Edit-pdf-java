@@ -1,6 +1,7 @@
 package Edit_pdf_java;
 
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import java.io.File;
@@ -64,6 +65,7 @@ public class Edit_pdf_java
 	    File dirOut = new File(OUTPUT_PATH);
 	    dirOut.mkdirs();
 		
+	    frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Edit_pdf_java.class.getResource("/imgs/PDFicon.png")));
 	    
 	}
 
@@ -73,6 +75,7 @@ public class Edit_pdf_java
 	private void initialize()
 	{
 		frame = new JFrame();
+		frame.setResizable(false);
 		frame.setBounds(100, 100, 444, 393);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
