@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="libs"/>
-	<classpathentry kind="src" path="pdf_Out"/>
 	<classpathentry kind="src" path="imgs"/>
 	<classpathentry kind="lib" path="libs/pdfbox-app-3.0.0-alpha2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
