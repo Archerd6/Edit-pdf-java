@@ -1,2 +1,2 @@
 # Edit-pdf-java
-Multiple runable clases to edit / change some features of pdfs
+Multiple runable clases (and program) to edit / change some features of pdfs
