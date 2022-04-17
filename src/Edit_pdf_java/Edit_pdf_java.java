@@ -199,7 +199,7 @@ public class Edit_pdf_java
 		
 		txtTextosiFuera = new JTextField();
 		txtTextosiFuera.setHorizontalAlignment(SwingConstants.CENTER);
-		txtTextosiFuera.setText("Texto");
+		txtTextosiFuera.setText("(Number)");
 		txtTextosiFuera.setBounds(0, 0, 428, 20);
 		frame.getContentPane().add(txtTextosiFuera);
 		txtTextosiFuera.setColumns(10);
