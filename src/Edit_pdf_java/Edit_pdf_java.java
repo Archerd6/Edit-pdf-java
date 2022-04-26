@@ -155,7 +155,7 @@ public class Edit_pdf_java
 			}
 		});
 		btnRemoveMetadata.setFocusable(false);
-		btnRemoveMetadata.setBounds(10, 227, 137, 23);
+		btnRemoveMetadata.setBounds(10, 227, 143, 23);
 		frame.getContentPane().add(btnRemoveMetadata);
 		
 		btnRemovePage = new JButton("Remove Page");
