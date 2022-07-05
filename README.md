@@ -7,3 +7,6 @@ Program to edit / change some features of pdfs
 	https://github.com/Archerd6/Edit-pdf-java/raw/master/Edit-pdf.jar
 </p>
 
+
+###### Java Version : &nbsp; &nbsp; &nbsp;  JDK 1.8
+
