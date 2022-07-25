@@ -59,62 +59,62 @@ public class Insert_metadata_Window extends JFrame /*La clase principal es una v
 		
 		textTitle = new JTextField();
 		textTitle.setText("T");
-		textTitle.setBounds(166, 35, 132, 20);
+		textTitle.setBounds(192, 59, 132, 20);
 		getContentPane().add(textTitle);
 		textTitle.setColumns(10);
 		
 		textSubject = new JTextField();
 		textSubject.setText("S");
 		textSubject.setColumns(10);
-		textSubject.setBounds(166, 82, 132, 20);
+		textSubject.setBounds(192, 106, 132, 20);
 		getContentPane().add(textSubject);
 		
 		textKeywords = new JTextField();
 		textKeywords.setText("K");
 		textKeywords.setColumns(10);
-		textKeywords.setBounds(166, 135, 132, 20);
+		textKeywords.setBounds(192, 152, 132, 20);
 		getContentPane().add(textKeywords);
 		
 		textProducer = new JTextField();
 		textProducer.setText("P");
 		textProducer.setColumns(10);
-		textProducer.setBounds(166, 274, 132, 20);
+		textProducer.setBounds(192, 288, 132, 20);
 		getContentPane().add(textProducer);
 		
 		textAuthor = new JTextField();
 		textAuthor.setText("A");
 		textAuthor.setColumns(10);
-		textAuthor.setBounds(166, 185, 132, 20);
+		textAuthor.setBounds(192, 199, 132, 20);
 		getContentPane().add(textAuthor);
 		
 		textCreator = new JTextField();
 		textCreator.setText("C");
 		textCreator.setColumns(10);
-		textCreator.setBounds(166, 231, 132, 20);
+		textCreator.setBounds(192, 246, 132, 20);
 		getContentPane().add(textCreator);
 		
 		JLabel lblTitle = new JLabel("Title");
-		lblTitle.setBounds(35, 38, 46, 14);
+		lblTitle.setBounds(65, 62, 46, 14);
 		getContentPane().add(lblTitle);
 		
 		JLabel lblSubject = new JLabel("Subject");
-		lblSubject.setBounds(35, 85, 46, 14);
+		lblSubject.setBounds(65, 109, 46, 14);
 		getContentPane().add(lblSubject);
 		
 		JLabel lblKeywords = new JLabel("Keywords");
-		lblKeywords.setBounds(35, 138, 76, 14);
+		lblKeywords.setBounds(65, 155, 76, 14);
 		getContentPane().add(lblKeywords);
 		
 		JLabel lblAuthor = new JLabel("Author");
-		lblAuthor.setBounds(35, 188, 46, 14);
+		lblAuthor.setBounds(65, 202, 46, 14);
 		getContentPane().add(lblAuthor);
 		
 		lblCreator = new JLabel("Creator");
-		lblCreator.setBounds(35, 234, 46, 14);
+		lblCreator.setBounds(65, 249, 46, 14);
 		getContentPane().add(lblCreator);
 		
 		lblProducer = new JLabel("Producer");
-		lblProducer.setBounds(35, 277, 57, 14);
+		lblProducer.setBounds(65, 291, 57, 14);
 		getContentPane().add(lblProducer);
 		
 		btnInsert = new JButton("Insert");

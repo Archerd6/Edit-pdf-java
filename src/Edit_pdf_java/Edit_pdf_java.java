@@ -1,6 +1,7 @@
 package Edit_pdf_java;
 
 import java.awt.EventQueue;
+import java.awt.Insets;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
@@ -8,10 +9,19 @@ import javax.swing.JFrame;
 import java.io.File;
 import java.io.IOException;
 
+import javax.swing.AbstractButton;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
 
 public class Edit_pdf_java
 {
@@ -122,7 +132,7 @@ public class Edit_pdf_java
 			}
 		});
 		btnMergePdfs.setFocusable(false);
-		btnMergePdfs.setBounds(270, 33, 127, 23);
+		btnMergePdfs.setBounds(293, 33, 127, 23);
 		frame.getContentPane().add(btnMergePdfs);
 		
 		BRemove_links = new JButton("Remove links");
@@ -142,7 +152,7 @@ public class Edit_pdf_java
 			}
 		});
 		BRemove_links.setFocusable(false);
-		BRemove_links.setBounds(270, 118, 127, 23);
+		BRemove_links.setBounds(293, 118, 127, 23);
 		frame.getContentPane().add(BRemove_links);
 		
 		btnRemoveMetadata = new JButton("Remove Metadata");
@@ -172,7 +182,7 @@ public class Edit_pdf_java
 			}
 		});
 		btnRemovePage.setFocusable(false);
-		btnRemovePage.setBounds(270, 227, 127, 23);
+		btnRemovePage.setBounds(293, 227, 127, 23);
 		frame.getContentPane().add(btnRemovePage);
 		
 		btnSplit = new JButton("Split PDF");
@@ -187,5 +197,51 @@ public class Edit_pdf_java
 		btnSplit.setFocusable(false);
 		btnSplit.setBounds(145, 305, 127, 23);
 		frame.getContentPane().add(btnSplit);
+		
+		JButton btnCreate = new JButton();
+		btnCreate.setLayout(new BorderLayout());
+		JLabel label1 = new JLabel("  Create");
+		JLabel label2 = new JLabel(" Example");
+		btnCreate.add(BorderLayout.NORTH,label1);
+		btnCreate.add(BorderLayout.SOUTH,label2);
+		btnCreate.setBackground(new Color(240, 248, 255));
+		btnCreate.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				// Create a new empty document
+				PDDocument document = new PDDocument();
+
+				// Create a new blank page and add it to the document
+				PDPage blankPage = new PDPage();
+				document.addPage( blankPage );
+
+				try
+				{
+					// Save the newly created document
+					document.save("pdf_Out/BlankPage.pdf");
+					// finally make sure that the document is properly
+					// closed.
+					document.close();
+					
+				}
+				catch (IOException e1)
+				{
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+
+				
+			}
+		});
+		btnCreate.setHorizontalAlignment(SwingConstants.RIGHT);
+		btnCreate.setBounds(336, 320, 94, 36);
+		btnCreate.setFocusable(false);
+		btnCreate.setHorizontalTextPosition(AbstractButton.LEADING);
+		btnCreate.setMargin(new Insets(0, 0, 0, 0));
+		
+		ImageIcon icon =new ImageIcon(getClass().getResource("/imgs/PDFicon_mini.png"));
+		btnCreate.setIcon(icon);
+		frame.getContentPane().add(btnCreate);
 	}
 }
