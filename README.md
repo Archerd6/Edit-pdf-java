@@ -11,6 +11,7 @@ Main features:
 
    + Remove Pages, Links or Metadata 🔽
 
+<br>
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/Archerd6/Edit-pdf-java/master/res/imgs/Pdf-edit-java-V2.png" style="width:30%">
