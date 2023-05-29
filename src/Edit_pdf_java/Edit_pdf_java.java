@@ -81,7 +81,7 @@ public class Edit_pdf_java
 	{
 		frame = new JFrame();
 		frame.setResizable(false);
-		frame.setBounds(100, 100, 444, 393);
+		frame.setBounds(100, 100, 454, 430);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -234,7 +234,7 @@ public class Edit_pdf_java
 			}
 		});
 		btnCreate.setHorizontalAlignment(SwingConstants.RIGHT);
-		btnCreate.setBounds(336, 320, 94, 36);
+		btnCreate.setBounds(336, 347, 94, 36);
 		btnCreate.setFocusable(false);
 		btnCreate.setHorizontalTextPosition(AbstractButton.LEADING);
 		btnCreate.setMargin(new Insets(0, 0, 0, 0));
@@ -242,5 +242,19 @@ public class Edit_pdf_java
 		ImageIcon icon =new ImageIcon(getClass().getResource("/imgs/PDFicon_mini.png"));
 		btnCreate.setIcon(icon);
 		frame.getContentPane().add(btnCreate);
+		
+		
+		JButton btnPDFtoImg = new JButton("Print PDF to PNGs");
+		btnPDFtoImg.setBackground(new Color(240, 240, 240));
+		btnPDFtoImg.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				PDFtoImg.Ejecutar();
+			}
+		});
+		btnPDFtoImg.setBounds(10, 362, 143, 21);
+		frame.getContentPane().add(btnPDFtoImg);
+		btnPDFtoImg.setFocusable(false);
 	}
 }
